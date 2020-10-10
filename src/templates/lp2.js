@@ -1,12 +1,12 @@
-import React from 'react'
-import { graphql } from 'gatsby'
+import React from "react"
+import { graphql } from "gatsby"
 import { css } from "@emotion/core"
 
-export default function Lp1({ data: { lps }}) {
+export default function Lp1({ data: { lps } }) {
   const cemeteries = lps.properties.map(property => {
-    return(
+    return (
       <div key={property.name} css={card}>
-        <img alt='' src={property.image} css={image} />
+        <img alt="" src={property.image} css={image} />
         <div css={text}>
           <p css={name}>{property.name}</p>
           <p>{property.type}</p>
@@ -16,12 +16,10 @@ export default function Lp1({ data: { lps }}) {
     )
   })
   return (
-  <>
-    <h1 css={title}>品揃え一番</h1>
-    <div css={contents}>
-      {cemeteries}
-    </div>
-  </>
+    <>
+      <h1 css={title}>品揃え一番</h1>
+      <div css={contents}>{cemeteries}</div>
+    </>
   )
 }
 
@@ -59,7 +57,7 @@ const name = css`
 `
 
 export const pageQuery = graphql`
-  query LpType2($id: String){
+  query LpType2($id: String) {
     lps(id: { eq: $id }) {
       properties {
         address

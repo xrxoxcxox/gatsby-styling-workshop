@@ -30,12 +30,12 @@ exports.createPages = async ({ graphql, actions }) => {
       path: `${page.parent.name}-${name}`,
       component: template,
       context: {
-        id: page.id
+        id: page.id,
       },
     })
   }
-  pages.forEach((page) => {
-    pageByTemplate(page, lpTemplate1, 'type1')
-    pageByTemplate(page, lpTemplate2, 'type2')
+  pages.forEach(page => {
+    pageByTemplate(page, lpTemplate1, "type1")
+    pageByTemplate(page, lpTemplate2, "type2")
   })
 }
