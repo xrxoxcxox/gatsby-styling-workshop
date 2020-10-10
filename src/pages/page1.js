@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
-import BackgroundImage from 'gatsby-background-image'
+import BackgroundImage from "gatsby-background-image"
 import { css } from "@emotion/core"
 
 const header = css`
@@ -90,41 +90,52 @@ const footer = css`
 export default function Page1({ data }) {
   return (
     <>
-      <header css={header}>
-        Smartphone Only
-      </header>
-      <BackgroundImage fluid={data.keyVisual.childImageSharp.fluid} css={aboveTheFold}>
+      <header css={header}>Smartphone Only</header>
+      <BackgroundImage
+        fluid={data.keyVisual.childImageSharp.fluid}
+        css={aboveTheFold}
+      >
         <h1 css={h1}>This is page1</h1>
         <h2 css={h2}>Some heading text</h2>
         <button css={button}>Call to Action</button>
       </BackgroundImage>
       <section css={section}>
         <h3 css={h3}>Subheading sentence.</h3>
-        <p css={lead}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p css={lead}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
       </section>
       <section css={section}>
         <div css={item}>
           <Img fluid={data.item1.childImageSharp.fluid} />
           <h3 css={itemName}>item name1</h3>
-          <p css={itemText}>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p css={itemText}>
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat.
+          </p>
           <button css={button}>Call to Action</button>
         </div>
         <div css={item}>
           <Img fluid={data.item2.childImageSharp.fluid} />
           <h3 css={itemName}>item name2</h3>
-          <p css={itemText}>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p css={itemText}>
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat.
+          </p>
           <button css={button}>Call to Action</button>
         </div>
         <div css={item}>
           <Img fluid={data.item3.childImageSharp.fluid} />
           <h3 css={itemName}>item name3</h3>
-          <p css={itemText}>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p css={itemText}>
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat.
+          </p>
           <button css={button}>Call to Action</button>
         </div>
       </section>
-      <footer css={footer}>
-        ©︎ 2020 FooBar
-      </footer>
+      <footer css={footer}>©︎ 2020 FooBar</footer>
     </>
   )
 }
